@@ -2,6 +2,9 @@
 
 .DEFAULT_GOAL := build
 
+tests:
+	@env/bin/pytest src/app/tests/
+
 build:
 	virtualenv -p python3.6 env
 	@env/bin/pip install -r requirements.txt
