@@ -3,7 +3,7 @@
 .DEFAULT_GOAL := build
 
 tests:
-	@env/bin/pytest src/app/tests/
+	@env/bin/pytest -p app.tests.fixtures src/app/tests/ src/framework/tests/
 
 build:
 	virtualenv -p python3.6 env
